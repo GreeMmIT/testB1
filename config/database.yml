@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: testB1_production
-  username: testB1
-  password: <%= ENV["TESTB1_DATABASE_PASSWORD"] %>
+  database: luke_tiengo_2022_testB1
+  username: Rails.application.credentials.db[:user]
+  password: Rails.application.credentials.db[:pass]
